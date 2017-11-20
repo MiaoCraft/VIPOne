@@ -1,0 +1,38 @@
+version: '1.2.3'
+expired: 你的 %group% 已到期
+message1: 天VIP
+message2: 天VIP
+days: 天
+list: Key列表
+the: 这
+name: 名称
+rvip: 管理员 %admin% 移除了 %name% 的VIP
+cdays: 管理员 %admin% 改变了 %name% 的VIP组 %group% 为 %days% 天
+group: 组
+reload: 配置重读
+initialdate: 开通日期
+daysleft: 天数剩余
+addvip: 添加了 %days% 天到 %group%
+success1: 全被Key被删除
+success2: 成功开通 %group% %days% 天
+success3: '%name% 成功开通 %group% %days% 天'
+success4: VIP组已改变
+success5: Key %key% 被删除
+error1: 天数必须大于0
+error2: 天数必须是一个数字
+error3: Key不存在
+error4: Key不存在, 生成输入 /newkey
+error5: Key未找到
+error6: 你不是VIP了
+error7: 玩家未找到
+error8: VIP组未找到
+error9: 不是VIP
+error10: 每天只能改变一次
+error11: 你没有权限
+error12: 你不能拥有这个类型VIP
+error13: 代码处理中
+error14: 代码已经被使用
+error15: 代码未找到
+error16: 此代码未支付
+error17: 此支付代码不存在
+error18: 请求错误
