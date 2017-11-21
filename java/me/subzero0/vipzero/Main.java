@@ -11,7 +11,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Callable;
 
+import me.subzero0.vipzero.Metrics;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.clip.placeholderapi.PlaceholderHook;
 import net.milkbowl.vault.economy.Economy;
@@ -88,12 +90,8 @@ public class Main extends JavaPlugin implements Listener {
 			getServer().getConsoleSender().sendMessage("");
 			getServer().getConsoleSender().sendMessage(ChatColor.DARK_AQUA+"======================================");
 		}
-		
-		boolean check_update = true;
-		if(getConfig().contains("check_for_updates"))
-			if(!getConfig().getBoolean("check_for_updates"))
-				check_update=false;
-		
+        Metrics metrics = new Metrics(this);
+
 		getServer().getPluginCommand("gerarkey").setExecutor(new Commands(this));
 		getServer().getPluginCommand("newkey").setExecutor(new Commands(this));
 		getServer().getPluginCommand("keys").setExecutor(new Commands(this));
@@ -203,7 +201,7 @@ public class Main extends JavaPlugin implements Listener {
 	        }, 20L, 1200*tempo);
         }
 
-        server_name=getConfig().getString("server_name").replaceAll("&", "¡ì");
+        server_name=getConfig().getString("server_name").replaceAll("&", "Â§");
         
         use_vault_for_perms=getConfig().getBoolean("use_vault_for_permissions");
         

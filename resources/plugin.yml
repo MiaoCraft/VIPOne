@@ -1,6 +1,6 @@
-name: VipZero
+name: VIPZero-Rel
 main: me.subzero0.vipzero.Main
-version: 1.2.3
+version: 1.2.4
 softdepend: [Vault, PlaceholderAPI]
 commands:
    gerarkey:

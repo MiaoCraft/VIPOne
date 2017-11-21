@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/MC"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Vault"/>
 	<classpathentry kind="src" path="java"/>
 	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/GM&amp;PEX"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/PAPI"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/MC"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

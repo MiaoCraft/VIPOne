@@ -152,7 +152,7 @@ public class Items extends Thread {
 					    					case "aquaaffinity": {is.addUnsafeEnchantment(Enchantment.WATER_WORKER, Integer.parseInt(opt));break;}
 					    					case "name": {
 					    						ItemMeta im = is.getItemMeta();
-					    						opt = opt.replaceAll("&", "¡ì");
+					    						opt = opt.replaceAll("&", "Â§");
 					    						opt = opt.replaceAll("@player", p.getName());
 					    						im.setDisplayName(opt);
 					    						is.setItemMeta(im);
@@ -161,7 +161,7 @@ public class Items extends Thread {
 					    					case "desc": {
 					    						ItemMeta im = is.getItemMeta();
 					    						ArrayList<String> lore = new ArrayList<String>();
-					    						opt = opt.replaceAll("&", "¡ì");
+					    						opt = opt.replaceAll("&", "Â§");
 					    						opt = opt.replaceAll("@player", p.getName());
 					    						if(im.getLore()!=null)
 						    						for(String n : im.getLore())
@@ -369,7 +369,7 @@ public class Items extends Thread {
 						    					break;
 						    				}
 											case "name": {
-												opt = opt.replaceAll("&", "¡ì");
+												opt = opt.replaceAll("&", "Â§");
 												opt = opt.replaceAll("@player", p.getName());
 					    						pm.setDisplayName(opt);
 					    						sample.setItemMeta(pm);
@@ -377,7 +377,7 @@ public class Items extends Thread {
 					    					}
 					    					case "desc": {
 					    						ArrayList<String> lore = new ArrayList<String>();
-					    						opt = opt.replaceAll("&", "¡ì");
+					    						opt = opt.replaceAll("&", "Â§");
 					    						opt = opt.replaceAll("@player", p.getName());
 					    						if(pm.getLore()!=null)
 						    						for(String n : pm.getLore())
@@ -431,7 +431,7 @@ public class Items extends Thread {
 		    		}
 		    		else if(text.equalsIgnoreCase("message")||text.equalsIgnoreCase("mensagem")||text.equalsIgnoreCase("msg")) {
 		    			String msg = i.split(",")[3].replaceAll("@player", p.getName());
-		    			msg = msg.replaceAll("&","¡ì");
+		    			msg = msg.replaceAll("&","Â§");
 		    			p.sendMessage(msg);
 		    		}
 		    		else {
