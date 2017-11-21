@@ -1,7 +1,11 @@
 name: VIPZero-Rel
 main: me.subzero0.vipzero.Main
-version: 1.2.4
-softdepend: [Vault, PlaceholderAPI]
+version: 1.2.5
+authors: [Subzero0, Mayomi]
+website: http://www.mcbbs.net/thread-769581-1-1.html
+
+depend: [Vault]
+softdepend: [GroupManager, PermissionsEX, PlaceholderAPI]
 commands:
    gerarkey:
       description: Gera uma key com X dias.

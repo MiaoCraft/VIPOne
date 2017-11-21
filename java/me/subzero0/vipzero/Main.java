@@ -635,12 +635,4 @@ public class Main extends JavaPlugin implements Listener {
 		return key;
 	}
 
-	@EventHandler
-	private void onCmd(PlayerCommandPreprocessEvent e) {
-		if ((e.getMessage().startsWith("/usekey") || e.getMessage().startsWith("/usarkey")) && e.getMessage().contains("'")) {
-			e.setCancelled(true);
-		}
-	}
-
-
 }
