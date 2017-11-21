@@ -5,9 +5,8 @@ MySQL:
   Username: test
   Password: '123'
   Database: minecraft
-language: en
+language: cn
 server_name: '&7[&bVIPZero&7] '
-check_for_updates: true
 case_sensitive_for_flatfile: false
 key_length: 10
 one_vip_change: false
@@ -28,7 +27,7 @@ vip_items:
 - vip1,0,potion:poison:true:10:1,1,blindness-10:1
 - vip1,0,$,1000,none
 - vip1,0,xp,10,none
-- vip1,0,cmd,say @player Muito bom!
+- vip1,0,cmd,say @player 嘿,我在使用VIPZero!
 - vip1,0,310-311-312-313,1,protection-4
-- vip1,0,msg,Oi @player &3tudo bom&4?
-- vip1,0,276,1,sharpness-3-knockback-2-name-&4Legendary @player-desc-&3desc 1-desc-&c@player
+- vip1,0,msg,测试 @player &3颜色代码&4?
+- vip1,0,276,1,sharpness-3-knockback-2-name-&4史诗的 @player-desc-&3desc 1-desc-&c@player

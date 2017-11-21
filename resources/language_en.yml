@@ -1,4 +1,4 @@
-version: '1.2.3'
+version: '1.2.5'
 expired: 'Your time with %group% expired'
 message1: 'days with VIP'
 message2: 'Days with VIP'
