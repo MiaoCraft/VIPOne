@@ -6,7 +6,7 @@
 
     <groupId>me.subzero0.vipzero</groupId>
     <artifactId>vipzero</artifactId>
-    <version>1.3</version>
+    <version>1.3-Snapshot</version>
     <build>
         <plugins>
             <plugin>
