@@ -19,6 +19,7 @@ import me.clip.placeholderapi.PlaceholderHook;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -304,65 +305,14 @@ public class Main extends JavaPlugin implements Listener {
     				perms.playerRemoveGroup(p, g);
     		}
     	}
-    	if(getServer().getPluginManager().getPlugin("PlaceholderAPI") != null){
-			PlaceholderAPI.registerPlaceholderHook("vipzero", new PlaceholderHook() {
-				@Override
-				public String onPlaceholderRequest(Player player, String string) {
-					if(string.equalsIgnoreCase("vip")){
-						for(String groups : getConfig().getStringList("vip_groups")){
-							if(perms.getPrimaryGroup(player).equalsIgnoreCase(groups)){
-								return "true";
-							}
-						}
-						return "false";
-					}else if(string.equalsIgnoreCase("leftday")){
-						if(getConfig().getBoolean("MySQL.use")){
-							CompletableFuture<String> resultFuture = CompletableFuture.supplyAsync(()->{
-								int days = 0;
-								try {
-									Connection con = DriverManager.getConnection(mysql_url,mysql_user,mysql_pass);
-									PreparedStatement pst = con.prepareStatement("SELECT * FROM `vips` WHERE `nome`='"+player.getName()+"';");
-									ResultSet rs = pst.executeQuery();
-									if (rs.next()){
-										for (String gname : getConfig().getStringList("vip_groups")) {
-											if (rs.getInt(gname.trim()) != 0) {
-												days = rs.getInt(gname.trim());
-											}
-										}
-									}
-									pst.close();
-									rs.close();
-									con.close();
-								}
-								catch(Exception e) {
-									e.printStackTrace();
-								}
-								return days+"";
-							});
-							try {
-								return resultFuture.get();
-							} catch (InterruptedException e) {
-								e.printStackTrace();
-							} catch (ExecutionException e) {
-								e.printStackTrace();
-							}
-							return "0";
-						}else {
-							for(String gname : getConfig().getStringList("vip_groups")){
-								if(getConfig().contains("vips."+ player.getName()+ "." + gname.trim())){
-									return getConfig().getInt("vips."+ player.getName()+"."+gname) + "";
-								}
-							}
-							return "known";
-						}
-					}else if(string.equalsIgnoreCase("group")){
-						return perms.getPrimaryGroup(player);
-					}else {
-						return null;
-					}
-				}
-			});
-		}
+
+        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+        	 
+            Bukkit.getPluginManager().registerEvents(this, this);
+ 
+        } else {
+            throw new RuntimeException("Could not find PlaceholderAPI!! Plugin can not work without it!");
+        }
     }
     
     protected void DarVip(Player p, int dias, String grupo) {

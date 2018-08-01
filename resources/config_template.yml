@@ -12,7 +12,7 @@ key_length: 10
 one_vip_change: false
 usekey_global: false
 rvip_unlisted: true
-use_vault_for_permissions: false
+use_vault_for_permissions: true
 check_time: 10
 logging:
   usekey: false
