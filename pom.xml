@@ -20,27 +20,51 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>bukkit-repo</id>
+            <url>http://repo.bukkit.org/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>slipcor-repo</id>
+            <url>https://repo2.craftyn.com/repository/snapshots</url>
+        </repository>
+        <repository>
+            <id>placeholderapi-repo</id>
+            <url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+        <repository>
+            <id>i5mc</id>
+            <url>http://ci.mengcraft.com:8080/plugin/repository/everything/</url>
+        </repository>
+        <repository>
+            <id>vault-repo</id>
+            <url>http://nexus.hc.to/content/repositories/pub_releases</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>1</groupId>
-            <artifactId>1</artifactId>
+            <groupId>org.anjocaido</groupId>
+            <artifactId>groupmanager</artifactId>
             <scope>system</scope>
             <systemPath>${basedir}/lib/EssentialsGroupManager.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>2</groupId>
-            <artifactId>2</artifactId>
+            <groupId>ru.tehkode</groupId>
+            <artifactId>PermissionsEx</artifactId>
             <scope>system</scope>
             <systemPath>${basedir}/lib/PermissionsEx-1.23.4.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>3</groupId>
-            <artifactId>3</artifactId>
+            <groupId>net.milkbowl</groupId>
+            <artifactId>vault</artifactId>
             <scope>system</scope>
             <systemPath>${basedir}/lib/Vault.jar</systemPath>
         </dependency>
